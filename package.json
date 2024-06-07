@@ -3,7 +3,14 @@
   "version": "0.0.1",
   "main": "init.js",
   "description": "A custom Commitizen adapter/config for creating standardized commit messages with fewer terminal prompts and other boilerplate which wastes our precious time. ✨",
-  "keywords": ["commitizen", "adapter", "git", "commits", "automation", "standardized messages"],
+  "keywords": [
+    "commitizen",
+    "adapter",
+    "git",
+    "commits",
+    "automation",
+    "standardized messages"
+  ],
   "author": {
     "name": "Remco Stoeten",
     "email": "remcostoeten@hotmail.com"
