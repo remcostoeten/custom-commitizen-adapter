@@ -1,12 +1,12 @@
 {
   "name": "custom-commitizen-adapter",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "This is a custom commitizen adapter created by Remco Stoeten. More about Remco can be found at https://remcostoeten.com and https://github.com/remcostoeten",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Remco Stoeten <https://remcostoeten.com> (https://github.com/remcostoeten)",
   "license": "ISC"
 }
