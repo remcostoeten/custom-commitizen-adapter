@@ -9,10 +9,13 @@ A custom Commitizen adapter/config for creating standardized commit messages wit
 Since it's an adapter for Commitizen, you need to have Commitizen installed globally:
 
 @@@
+
 # Install Commitizen globally
+
 npm install -g commitizen
 
 # Install this package globally
+
 npm install -g cleaner-commitizen-adapter
 @@@
 
@@ -37,6 +40,7 @@ Answer the prompts to generate a standardized commit message.
 ### Prompts
 
 1. **Type of Change**: Select the type of change you are committing. Options include:
+
    - `feat`: A new feature
    - `fix`: A bug fix
    - `docs`: Documentation only changes
@@ -53,15 +57,15 @@ If you find the `cz` command annoying or having to `git add`, or push prior to r
 
 1. Open `.zshrc` <small>Or `.bashrc` if you're using bash</small>:
 
-    @@@
-    vim ~/.zshrc
-    @@@
+   @@@
+   vim ~/.zshrc
+   @@@
 
 2. Add alias:
 
-    @@@
-    alias commit='cz'
-    @@@
+   @@@
+   alias commit='cz'
+   @@@
 
 Now, you can use the alias `commit` to quickly run the CLI tool. This allows you to type `commit` which could be more intuitive than `cz`.
 
@@ -74,7 +78,7 @@ alias push='git add . && cz && git push'
 A safe way to use this, but which is a little bit more time-consuming is to use the following alias:
 
 @@@
-alias push='git add . && cz && echo "You are about to push $(git diff --cached --numstat | wc -l) files." && echo "Are you sure you want to push these changes? (y/n/c) [Yes/No - commit only/No - abort all]" && read ans && if [[ $ans = "y" ]]; then git push; elif [[ $ans = "n" ]]; then echo "Changes committed, but not pushed."; else echo "Operation aborted."; git reset HEAD~; fi'
+alias push='git add . && cz && echo "You are about to push $(git diff --cached --numstat | wc -l) files." && echo "Are you sure you want to push these changes? (y/n/c) [Yes/No - commit only/No - abort all]" && read ans && if [[$ans = "y"]]; then git push; elif [[$ans = "n"]]; then echo "Changes committed, but not pushed."; else echo "Operation aborted."; git reset HEAD~; fi'
 @@@
 
 This will ask you after the commit if you want to continue with X files or not, giving you the option to push, quit, or only commit.

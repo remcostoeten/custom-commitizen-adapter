@@ -11,22 +11,29 @@ exports.prompter = async function (cz, commit) {
   const types = [
     { name: "feat", description: "A new feature" },
     { name: "fix", description: "A bug fix" },
+    { name: "ui", description: "Work on the user interface" },
+    { name: "logic", description: "Work on core logic" },
+    {
+      name: "refactor",
+      description: "A code change that neither fixes a bug nor adds a feature",
+    },
+    {
+      name: "chore",
+      description: "Changes to the build process or auxiliary tools",
+    },
     { name: "docs", description: "Documentation only changes" },
-    { name: "style", description: "Changes that do not affect the meaning of the code" },
-    { name: "refactor", description: "A code change that neither fixes a bug nor adds a feature" },
-    { name: "test", description: "Adding missing tests or correcting existing tests" },
-    { name: "chore", description: "Changes to the build process or auxiliary tools" },
+    { name: "release", description: "Release a new version" },
   ];
 
   // Calculate the maximum length of the type strings
-  const maxTypeLength = Math.max(...types.map(type => type.name.length));
+  const maxTypeLength = Math.max(...types.map((type) => type.name.length));
 
   const questions = [
     {
       type: "list",
       name: "type",
       message: "Select the type of change you are committing:",
-      choices: types.map(type => ({
+      choices: types.map((type) => ({
         name: `${type.name.padEnd(maxTypeLength)}  ${type.description}`,
         value: type.name,
       })),
