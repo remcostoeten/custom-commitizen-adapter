@@ -4,8 +4,6 @@ A custom Commitizen adapter/config for creating standardized commit messages wit
 
 <small>This stuff makes it look like you know what you're doing, dawg. 👀</small>
 
-![t-rec](https://github.com/remcostoeten/custom-commitizen-adapter/assets/57683378/2b6d5499-36b6-471e-9f80-c79a4d8b5a03)
-
 ```bash
 commit a401633a9362c3940c447daeaebaf264582da0f7
 Author: Remco Stoeten <remcostoeten@hotmail.com>
@@ -13,11 +11,13 @@ Date:   Sat Jun 8 06:54:43 2024 +0200
     chore: This video is such a chore man....
 ```
 
+
+
 ## Installation
 
 Since it's an adapter for Commitizen, you need to have Commitizen installed globally:
 
-```
+```bash
 
 # Install Commitizen globally
 
@@ -32,7 +32,7 @@ Commitizen does not support custom configuration via their own config file. To u
 
 Alternatively, you can run the following command to create the file with the correct content in one go:
 
-```
+```bash
 echo '{ "path": "cleaner-commitizen-adapter" }' > ~/.czrc
 ```
 
@@ -40,7 +40,7 @@ echo '{ "path": "cleaner-commitizen-adapter" }' > ~/.czrc
 
 To use this adapter with Commitizen, run:
 
-```
+```bash
 cz
 ```
 
@@ -66,13 +66,13 @@ If you find the `cz` command annoying or having to `git add`, or push prior to r
 
 1. Open `.zshrc` <small>Or `.bashrc` if you're using bash</small>:
 
-   ```
+   ```bash
    vim ~/.zshrc
    ```
 
 2. Add alias:
 
-   ```
+   ```bash
    alias commit='cz'
    ```
 
@@ -80,13 +80,13 @@ Now, you can use the alias `commit` to quickly run the CLI tool. This allows you
 
 Another one which I personally use, but must be used with caution due to the adding everything and pushing instantly is:
 
-```
+```bash
 alias push='git add . && cz && git push'
 ```
 
 A safe way to use this, but which is a little bit more time-consuming is to use the following alias:
 
-```
+```bash
 alias push='git add . && cz && echo "You are about to push $(git diff --cached --numstat | wc -l) files." && echo "Are you sure you want to push these changes? (y/n/c) [Yes/No - commit only/No - abort all]" && read ans && if [[$ans = "y"]]; then git push; elif [[$ans = "n"]]; then echo "Changes committed, but not pushed."; else echo "Operation aborted."; git reset HEAD~; fi'
 ```
 
