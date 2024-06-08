@@ -1,15 +1,27 @@
 {
-  "name": "custom-commitizen-adapter",
-  "version": "0.0.1",
+  "name": "cleaner-commitizen-adapter",
+  "version": "1.0.0",
+  "description": "A custom Commitizen adapter/config for creating standardized commit messages with fewer terminal prompts and boilerplate.",
   "main": "init.js",
-  "description": "This is a custom commitizen adapter created by Remco Stoeten. More about Remco can be found at https://remcostoeten.com and https://github.com/remcostoeten",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remcostoeten/custom-commitizen-adapter/"
   },
-  "keywords": [],
-  "author": "Remco Stoeten <https://remcostoeten.com> (https://github.com/remcostoeten)",
-  "license": "ISC",
+  "keywords": [
+    "commitizen",
+    "adapter",
+    "commit",
+    "messages",
+    "cli",
+    "standardized",
+    "boilerplate",
+    "prompt",
+    "terminal",
+    "git"
+  ],
+  "author": "Remco Stoeten",
+  "homepage": "https://remcostoeten.com",
   "dependencies": {
-    "inquirer": "^9.2.23"
+    "inquirer": "^8.0.0"
   }
 }
