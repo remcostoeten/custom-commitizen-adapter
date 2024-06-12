@@ -96,4 +96,4 @@ This will ask you after the commit if you want to continue with X files or not, 
 
 xxx love y'all,
 
-Remco Stoeten
+[Remco Stoeten](https://remcostoeten.com)
