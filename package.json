@@ -1,6 +1,6 @@
 {
   "name": "cleaner-commitizen-adapter",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A custom Commitizen adapter/config for creating standardized commit messages with fewer terminal prompts and boilerplate.",
   "main": "init.js",
   "repository": {
