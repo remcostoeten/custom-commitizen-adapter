@@ -6,11 +6,11 @@ A custom Commitizen adapter/config for creating standardized commit messages wit
 
 ![t-rec](https://github.com/remcostoeten/custom-commitizen-adapter/assets/57683378/7fdbcd55-20b8-43b3-b995-41c70545d934)
 
-```shell
+```clis
 commit a401633a9362c3940c447daeaebaf264582da0f7
 Author: Remco Stoeten <remcostoeten@hotmail.com>
 Date:   Sat Jun 8 06:54:43 2024 +0200
-    chore: This video is such a chore man....
+chore: This video is such a chore man....
 ```
 
 
