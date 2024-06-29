@@ -22,7 +22,8 @@ exports.prompter = async function (cz, commit) {
       description: "Changes to the build process or auxiliary tools",
     },
     { name: "docs", description: "Documentation only changes" },
-    { name: "release", description: "Release a new version" },
+    { name: "WiP", description: "Still working on this" },
+    {name: "stash", description: "Not ready to commit, still committing anyways 🤡"},
   ];
 
   // Calculate the maximum length of the type strings
